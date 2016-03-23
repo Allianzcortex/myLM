@@ -1,0 +1,62 @@
+{% extends "management/base.html" %}
+{% load staticfiles %}
+{% block title %}添加图书{% endblock %}
+
+{% block content %}
+
+    <!-- 下面是关于 bootstrap 布局的部分-->
+    <div class="container">
+
+    {% if state == 'success' %}
+        <div class="well">
+            <h2 class="text-center text-success">添加成功</h2>
+        </div>
+
+        {% endif %}
+    <form method="post" role="form" class="form-horizontal">
+        {% csrf_token %}
+        <h1 class="form-signin-heading text-center">添加图书</h1>
+
+        <div class="form-group">
+                        <label for="id_{{ form.name.name }}" class="col-md-3 control-label">{{ form.name.label }}</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="id_{{ form.name.name }}" required name="{{ form.name.name }}" autofocus>
+                        </div>
+        </div>
+
+        <div class="form-group">
+                        <label for="id_{{ form.pub_date.name }}" class="col-md-3 control-label">{{ form.pub_date.label }}</label>
+                        <div class="col-md-9">
+                            <input type="date" class="form-control" id="id_{{ form.pub_date.name }}" required name="{{ form.pub_date.name }}" autofocus>
+                        </div>
+        </div>
+
+        <div class="form-group">
+                        <label for="id_{{ form.price.name }}" class="col-md-3 control-label">{{ form.price.label }}</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="id_{{ form.price.name }}" required name="{{ form.price.name }}" autofocus>
+                        </div>
+        </div>
+
+        <div class="form-group">
+                        <label for="id_{{ form.author.name }}" class="col-md-3 control-label">{{ form.author.label }}</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="id_{{ form.author.name }}" required name="{{ form.author.name }}" autofocus>
+                        </div>
+        </div>
+
+        <div class="form-group">
+                        <label for="id_{{ form.category.name }}" class="col-md-3 control-label">{{ form.category.label }}</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="id_{{ form.category.name }}" required name="{{ form.category.name }}" autofocus>
+                        </div>
+        </div>
+
+        <div class=" col-md-9"   >
+        <button type="submit" value="submit" class="btn btn-default">提交</button>
+        </div>
+
+
+    </form>
+    </div>
+{% endblock %}

@@ -2,10 +2,8 @@
 
 ---
 
-* 尝试用 `Django`写的一个图书馆管理系统
+* fork 自[LibraryManagement](https://github.com/yumendy/LibraryManagement)
 
-* 实现了用户的登录和注册、权限管理功能
+* 在原本的基础上增加了 form 表单，从而用 `form.cleaned_data.get()`取代了 `request.POST.get()`，更容易实现前后端的分离
 
-* 实现了对图书内容的添加
-
-* 实现了用列表形式读取图书内容
+* 将数据库改用 Mysql,同时增加了对错误条件的判断

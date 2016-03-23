@@ -1,0 +1,22 @@
+body {
+    padding-top: 50px;
+    background-color: #eeeeee;
+}
+
+#header-base {
+    background-color: #000;
+    color: #fff;
+}
+
+#base_name {
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar-nav > li > a, .navbar-brand {
+    padding-top:0 !important; 
+    padding-bottom:0 !important;
+    height: 22px;
+    font-size: 16px;
+}
+.navbar {min-height:12px !important;}
